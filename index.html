@@ -3,12 +3,6 @@
 <head>
 <meta charset="utf-8">
 
-<script src="vendor/angular/angular.js"></script>
-<script src="vendor/moment/moment.js"></script>
-<script src="vendor/moment-range/lib/moment-range.js"></script>
-<script src="vendor/angular-sanitize/angular-sanitize.js"></script>
-<script src="angular-horizontal-timeline/angular-horizontal-timeline.js"></script>
-<link rel="stylesheet" href="angular-horizontal-timeline/angular-horizontal-timeline.css">
 <link rel="stylesheet" href="vendor/github-markdown-css/github-markdown.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
 <!--[if lt IE 9]>
@@ -23,49 +17,13 @@
 	padding: 30px;
 }
 </style>
-<script type="text/javascript">
-var demoApp = angular.module('demoApp', ['angular-horizontal-timeline']);
-
-demoApp.controller('demoCtrl', function ($scope) {
-  $scope.startDate = moment().subtract(2, 'months').format('YYYY-MM-DD');
-  $scope.endDate = moment().add(2, 'months').format('YYYY-MM-DD');
-  $scope.events = [{'date': moment().subtract(7, 'days').format('YYYY-MM-DD'), 'content':'<p>lorem ipsum</p>'}, 
-                   {'date': moment().add(7, 'days').format('YYYY-MM-DD'), 'content':'<p>lorem ipsum</p>'}];
-});
-</script>
 </head>
-<body ng-app="demoApp" ng-controller="demoCtrl">
-
-<horizontal-timeline 
-		start-date="{{startDate}}" 
-		end-date="{{endDate}}"
-		events="events">
-	</horizontal-timeline>
-	
+<body>
 <div class="markdown-body">
-	<h1>angular-horizontal-timeline demo</h1>
-	
-	<h2>Install</h2>
-	<p>You can download all necessary angular-horizontal-timeline files manually or install it with bower:</p>
-	<div class="highlight highlight-sh"><pre>$ bower install --save angular-horizontal-timeline</pre></div>
-	
-	<h2>Load</h2>
-	<p>To use the directive, include the angular-horizontal-timeline's javascript and css files in your web page:</p>
-	<div class="highlight highlight-html"><pre>&lt;script src=&quot;angular-horizontal-timeline.js&quot;&gt;&lt;/script&gt;<br/>&lt;link rel=&quot;stylesheet&quot; href=&quot;angular-horizontal-timeline.css&quot;&gt;</pre></div>
-	
-	<h2>Add module dependency</h2>
-	<div class="highlight highlight-js"><pre>angular.module('app', ['angular-horizontal-timeline']);</pre></div>
-	
-	<h2>Usage</h2>
-	<pre class="highlight highlight-html">
-&lt;horizontal-timeline <br/>  start-date=&quot;{{startDate}}&quot; <br/>  end-date=&quot;{{endDate}}&quot;<br/>  events=&quot;{{events}}&quot;&gt;<br/>&lt;/horizontal-timeline&gt;		
-	</pre>
+  <h2>angular-horizontal-timeline demo</h2>
+  <a href="/angular-horizontal-timeline">Go</a>
 
-</div>
-<div class="github-fork-ribbon-wrapper left-bottom">
-	<div class="github-fork-ribbon">
-    <a href="https://github.com/eowo/angular-horizontal-timeline">Fork me on GitHub</a>
-	</div>
-</div>	
+  <h2>angular-star-rating demo</h2>
+  <a href="/angular-star-rating">Go</a>
 </body>
 </html>

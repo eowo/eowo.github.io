@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="vendor/angular/angular.js"></script>
+<script src="angular-star-rating.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="vendor/github-markdown-css/github-markdown.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
+<!--[if lt IE 9]>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css" />
+<![endif]-->
+
+<style type="text/css">
+.markdown-body {
+	min-width: 200px;
+	max-width: 790px;
+	margin: 0 auto;
+	padding: 30px;
+}
+</style>
+<script type="text/javascript">
+var demoApp = angular.module('demoApp', ['angular-star-rating']);
+
+demoApp.controller('demoCtrl', function ($scope) {
+  $scope.readOnlyModel = 3;
+  $scope.sizeModel = 5;
+  $scope.styleModel = 2;
+});
+</script>
+</head>
+<body ng-app="demoApp" ng-controller="demoCtrl">
+
+<div class="markdown-body">
+	<h1>angular-star-rating demo</h1>
+
+  <h3>Directive attributes</h3>
+  <p>
+    <b>read-only</b> {Boolean} (defaults to false) <br>
+    <b>size</b> {Number} (defaults to 5)
+  </p>
+
+  <h3>Read-only mode</h3>
+  <div class="highlight highlight-html"><pre>&lt;rating read-only=&quot;true&quot; ng-model=&quot;readOnlyModel&quot;&gt;&lt;/rating&gt;</pre></div>
+  <rating read-only="true" ng-model="readOnlyModel"></rating>
+
+  <h3>Validation</h3>
+  <div class="highlight highlight-html"><pre>&lt;rating ng-model=&quot;starModel&quot; ng-required=&quot;true&quot;&gt;&lt;/rating&gt;</pre></div>
+  <form name="aForm">
+    <rating ng-model="starModel" ng-required="true"></rating><br>
+  </form>
+  <p>starModel=<b>{{starModel}}</b> form.$valid=<b>{{aForm.$valid}}</b></p>
+
+  <h3>Size</h3>
+  <div class="highlight highlight-html"><pre>&lt;rating size=&quot;10&quot; ng-model=&quot;sizeModel&quot;&gt;&lt;/rating&gt;</pre></div>
+  <rating size="10" ng-model="sizeModel"></rating><br>
+
+  <h3>Style</h3>
+  <style type="text/css">
+  .big-green-stars>i{
+    font-size: 4.0em;
+    color: green;
+		text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+  }
+  </style>
+  <div class="highlight highlight-html"><pre>
+  &lt;style type=&quot;text/css&quot;&gt;
+    .big-green-stars &gt; i {
+      font-size: 4.0em;
+      color: green;
+      text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    }
+  &lt;/style&gt;
+
+  &lt;rating class=&quot;big-green-stars&quot; ng-model=&quot;sizeModel&quot;&gt;&lt;/rating&gt;</pre></div>
+  <rating class="big-green-stars" ng-model="styleModel"></rating><br>
+
+</div>
+<div class="github-fork-ribbon-wrapper left-bottom">
+	<div class="github-fork-ribbon">
+    <a href="https://github.com/eowo/angular-star-rating">Fork me on GitHub</a>
+	</div>
+</div>
+</body>
+</html>
