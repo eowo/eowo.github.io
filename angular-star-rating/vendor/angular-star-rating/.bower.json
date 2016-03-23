@@ -24,14 +24,15 @@
   "dependencies": {
     "angular": "~1.5.0"
   },
-  "_release": "ec0c2a8086",
+  "version": "0.0.2",
+  "_release": "0.0.2",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "ec0c2a8086faec21b67b06f194c405cfb0f922c5"
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "448f944e5ecbfc157500a32a54b3d147bd29077a"
   },
   "_source": "git://github.com/eowo/angular-star-rating.git",
-  "_target": "*",
+  "_target": "^0.0.2",
   "_originalSource": "angular-star-rating",
   "_direct": true
 }
